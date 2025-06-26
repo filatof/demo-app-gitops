@@ -1,0 +1,98 @@
+# frontend
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: frontend
+  namespace: app-demo
+spec:
+  protocol: http
+---
+# adservice
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: adservice
+  namespace: app-demo
+spec:
+  protocol: http
+---
+# cartservice
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: cartservice
+  namespace: app-demo
+spec:
+  protocol: http
+---
+# checkoutservice
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: checkoutservice
+  namespace: app-demo
+spec:
+  protocol: http
+---
+# currencyservice
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: currencyservice
+  namespace: app-demo
+spec:
+  protocol: http
+---
+# emailservice
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: emailservice
+  namespace: app-demo
+spec:
+  protocol: http
+---
+# paymentservice
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: paymentservice
+  namespace: app-demo
+spec:
+  protocol: http
+---
+# productcatalogservice
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: productcatalogservice
+  namespace: app-demo
+spec:
+  protocol: http
+---
+# recommendationservice
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: recommendationservice
+  namespace: app-demo
+spec:
+  protocol: http
+---
+# redis-cart (TCP, потому что Redis)
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: redis-cart
+  namespace: app-demo
+spec:
+  protocol: tcp
+---
+# shippingservice
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: shippingservice
+  namespace: app-demo
+spec:
+  protocol: http
