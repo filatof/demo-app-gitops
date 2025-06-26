@@ -27,8 +27,8 @@ spec:
       labels:
         app: frontend
       annotations:
-        sidecar.istio.io/rewriteAppHTTPProbers: "true"
         consul.hashicorp.com/connect-inject: "true"
+        consul.hashicorp.com/transparent-proxy-exclude-inbound-ports: "8080"
     spec:
       serviceAccountName: frontend
       securityContext:
@@ -114,21 +114,6 @@ metadata:
     app: frontend
 spec:
   type: ClusterIP
-  selector:
-    app: frontend
-  ports:
-  - name: http
-    port: 80
-    targetPort: 8080
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: frontend-external
-  labels:
-    app: frontend
-spec:
-  type: LoadBalancer
   selector:
     app: frontend
   ports:
