@@ -42,7 +42,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: checkoutservice
+          image: registry.eqlan.ru/fill/checkoutservice:1.0
           ports:
           - containerPort: 5050
           readinessProbe:

@@ -42,7 +42,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: shippingservice
+        image: registry.eqlan.ru/fill/shippingservice:1.0
         ports:
         - containerPort: 50051
         env:

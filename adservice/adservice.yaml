@@ -43,7 +43,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: adservice
+        image: registry.eqlan.ru/fill/adservice:1.0
         ports:
         - containerPort: 9555
         env:

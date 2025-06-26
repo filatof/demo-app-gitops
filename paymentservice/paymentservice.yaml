@@ -43,7 +43,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: paymentservice
+        image: registry.eqlan.ru/fill/paymentservice:1.0
         ports:
         - containerPort: 50051
         env:

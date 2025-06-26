@@ -43,7 +43,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: productcatalogservice
+        image: registry.eqlan.ru/fill/productcatalogservice:1.0
         ports:
         - containerPort: 3550
         env:
