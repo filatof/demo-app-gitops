@@ -26,6 +26,9 @@ spec:
     metadata:
       labels:
         app: shippingservice
+      annotations:
+        consul.hashicorp.com/connect-inject: "true"
+        consul.hashicorp.com/transparent-proxy-exclude-inbound-ports: "50051"
     spec:
       serviceAccountName: shippingservice
       securityContext:

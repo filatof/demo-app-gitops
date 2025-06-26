@@ -26,6 +26,9 @@ spec:
     metadata:
       labels:
         app: checkoutservice
+      annotations:
+        consul.hashicorp.com/connect-inject: "true"
+        consul.hashicorp.com/transparent-proxy-exclude-inbound-ports: "5050"
     spec:
       serviceAccountName: checkoutservice
       securityContext:

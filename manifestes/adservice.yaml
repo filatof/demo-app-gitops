@@ -26,6 +26,9 @@ spec:
     metadata:
       labels:
         app: adservice
+      annotations:
+        consul.hashicorp.com/connect-inject: "true"
+        consul.hashicorp.com/transparent-proxy-exclude-inbound-ports: "9555"
     spec:
       serviceAccountName: adservice
       terminationGracePeriodSeconds: 5

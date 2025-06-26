@@ -26,6 +26,9 @@ spec:
     metadata:
       labels:
         app: currencyservice
+      annotations:
+        consul.hashicorp.com/connect-inject: "true"
+        consul.hashicorp.com/transparent-proxy-exclude-inbound-ports: "7000"
     spec:
       serviceAccountName: currencyservice
       terminationGracePeriodSeconds: 5

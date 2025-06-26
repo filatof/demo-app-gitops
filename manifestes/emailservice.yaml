@@ -26,6 +26,9 @@ spec:
     metadata:
       labels:
         app: emailservice
+      annotations:
+        consul.hashicorp.com/connect-inject: "true"
+        consul.hashicorp.com/transparent-proxy-exclude-inbound-ports: "8080"
     spec:
       serviceAccountName: emailservice
       terminationGracePeriodSeconds: 5

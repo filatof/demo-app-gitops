@@ -26,6 +26,9 @@ spec:
     metadata:
       labels:
         app: cartservice
+      annotations:
+        consul.hashicorp.com/connect-inject: "true"
+        consul.hashicorp.com/transparent-proxy-exclude-inbound-ports: "7070"
     spec:
       serviceAccountName: cartservice
       terminationGracePeriodSeconds: 5

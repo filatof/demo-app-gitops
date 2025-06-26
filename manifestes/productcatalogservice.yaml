@@ -26,6 +26,9 @@ spec:
     metadata:
       labels:
         app: productcatalogservice
+      annotations:
+        consul.hashicorp.com/connect-inject: "true"
+        consul.hashicorp.com/transparent-proxy-exclude-inbound-ports: "3550"
     spec:
       serviceAccountName: productcatalogservice
       terminationGracePeriodSeconds: 5
