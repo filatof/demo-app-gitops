@@ -15,7 +15,7 @@ spec:
     allowedRoutes:
       namespaces:
         from: Same
-     tls:
+    tls:
       # Defines the certificate to use for the HTTPS listener.
       certificateRefs:
         - name: consul-server-cert
