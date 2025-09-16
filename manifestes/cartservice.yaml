@@ -46,7 +46,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/fill/cartservice:3.0
+        image: registry.eqlan.ru/boutique-app/cartservice:20250916-1812-ac6eee7a
         ports:
         - containerPort: 7070
         env:

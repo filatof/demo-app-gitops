@@ -45,7 +45,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: registry.eqlan.ru/fill/checkoutservice:1.0
+          image: registry.eqlan.ru/boutique-app/checkoutservice:20250916-1828-371e10ca
           ports:
           - containerPort: 5050
           readinessProbe:

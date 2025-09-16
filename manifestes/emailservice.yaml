@@ -46,7 +46,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/fill/emailservice:3.0
+        image: registry.eqlan.ru/boutique-app/emailservice:20250916-1834-efe2cf43
         ports:
         - containerPort: 8080
         env:
