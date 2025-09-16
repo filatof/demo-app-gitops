@@ -45,7 +45,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/fill/shippingservice:1.0
+        image: registry.eqlan.ru/boutique-app/shippingservice:20250916-1843-1018c519
         ports:
         - containerPort: 50051
         env:

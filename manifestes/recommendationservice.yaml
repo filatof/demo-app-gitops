@@ -46,7 +46,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/fill/recommendationservice:1.0
+        image: registry.eqlan.ru/boutique-app/recommendationservice:20250916-1842-d7ec0ee2
         ports:
         - containerPort: 8080
         readinessProbe:

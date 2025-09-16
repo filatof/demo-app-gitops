@@ -77,7 +77,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/fill/loadgenerator:0.0.30
+        image: registry.eqlan.ru/boutique-app/loadgenerator:20250916-1838-be0138a1
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"

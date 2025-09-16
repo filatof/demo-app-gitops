@@ -46,7 +46,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/fill/currencyservice:1.0
+        image: registry.eqlan.ru/boutique-app/currencyservice:20250916-1831-dfccfb1d
         ports:
         - name: grpc
           containerPort: 7000

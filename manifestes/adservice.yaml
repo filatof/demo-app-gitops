@@ -26,9 +26,9 @@ spec:
     metadata:
       labels:
         app: adservice
-      annotations:
-        consul.hashicorp.com/connect-inject: "true"
-        consul.hashicorp.com/transparent-proxy-exclude-inbound-ports: "9555"
+      # annotations:
+      #   consul.hashicorp.com/connect-inject: "true"
+      #   consul.hashicorp.com/transparent-proxy-exclude-inbound-ports: "9555"
     spec:
       serviceAccountName: adservice
       terminationGracePeriodSeconds: 5
@@ -46,7 +46,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/fill/adservice:1.0
+        image: registry.eqlan.ru/boutique-app/adservice:20250916-1749-614c5cf3
         ports:
         - containerPort: 9555
         env:
