@@ -4,4 +4,3 @@ resources:
 - gotk-components.yaml
 - gotk-sync.yaml
 - app-demo.yaml
-- my-test-app.yaml
