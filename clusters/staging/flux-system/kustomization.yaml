@@ -4,3 +4,15 @@ resources:
 - gotk-components.yaml
 - gotk-sync.yaml
 - app-demo.yaml
+patches:
+- target:
+    kind: Deployment
+    name: loadgenerator
+    namespace: default
+    version: v1
+  patch: |-
+    - op: replace
+      path: /spec/template/spec/containers/0/image
+      value: registry.eqlan.ru:443/boutique-app/loadgenerator:20250919-1736-c9b76c0f
+
+
