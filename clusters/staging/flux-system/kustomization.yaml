@@ -4,3 +4,13 @@ resources:
 - gotk-components.yaml
 - gotk-sync.yaml
 - app-demo.yaml
+patches:
+  - target:
+      # group: kustomize.toolkit.fluxcd.io
+      # version: v1
+      kind: ServiceAccount
+      name: source-controller
+    patch: |-
+      - op: add
+        path: /metadata/annotations/mytest
+        value: "hello@gcp.io"
