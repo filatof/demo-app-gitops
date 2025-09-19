@@ -12,7 +12,7 @@ patches:
       version: v1
     patch: |-
       - op: replace
-        path: /spec/template/spec/containers/0/image
+        path: /spec/template/spec/containers/image
         value: registry.eqlan.ru:443/boutique-app/loadgenerator:20250919-1736-c9b76c0f
 
 
