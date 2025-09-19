@@ -8,7 +8,7 @@ patches:
   - target:
       kind: ServiceAccount
       name: source-controller
-      namespace: flux-systm
+      namespace: flux-system
       version: v1
     patch: |-
       - op: add
