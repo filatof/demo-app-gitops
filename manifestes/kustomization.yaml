@@ -13,3 +13,15 @@ resources:
   - recommendationservice.yaml
   - redis.yaml
   - shippingservice.yaml
+patches:
+- target:
+    kind: Deployment
+    name: loadgenerator
+    namespace: default
+  patch: |-
+    spec:
+      template:
+        spec:
+          containers:
+          - name: main
+            image: "registry.eqlan.ru:443/boutique-app/loadgenerator:20250919-1736-c9b76c0f"
