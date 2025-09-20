@@ -2,15 +2,15 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../base
-#patches:
-#- target:
-#   kind: Deployment
-#   name: loadgenerator
-#   namespace: default
-#   group: apps
-#   version: v1
-# patch: |-
-#   - op: replace
-#     path: /spec/template/spec/containers/0/image
-#     value: "registry.eqlan.ru:443/boutique-app/loadgenerator:20250919-1736-c9b76c0f"
+patches:
+- target:
+   kind: Deployment
+   name: loadgenerator
+   namespace: default
+   group: apps
+   version: v1
+  patch: |-
+   - op: replace
+     path: /spec/template/spec/containers/0/image
+     value: "registry.eqlan.ru:443/boutique-app/loadgenerator:20250919-1736-c9b76c0f"
 
