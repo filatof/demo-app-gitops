@@ -18,10 +18,9 @@ patches:
     kind: Deployment
     name: loadgenerator
     namespace: default
+    group: apps
+    version: v1
   patch: |-
-    spec:
-      template:
-        spec:
-          containers:
-          - name: main
-            image: "registry.eqlan.ru:443/boutique-app/loadgenerator:20250919-1736-c9b76c0f"
+    - op: replace
+      path: /spec/template/spec/containers/0/image
+      value: "registry.eqlan.ru:443/boutique-app/loadgenerator:20250919-1736-c9b76c0f"
