@@ -8,6 +8,7 @@ spec:
   interval: 10m0s
   path: ./manifestes
   prune: true
+  targetNamespace: default
   sourceRef:
     kind: GitRepository
     name: flux-system
