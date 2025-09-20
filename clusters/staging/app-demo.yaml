@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./manifestes
+  path: ./apps/stage
   prune: true
   targetNamespace: default
   sourceRef:
