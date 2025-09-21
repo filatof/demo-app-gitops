@@ -7,3 +7,23 @@ metadata:
 spec:
   image: registry.eqlan.ru/boutique-app/loadgenerator
   interval: 5m0s
+
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: adservice
+  namespace: flux-system
+spec:
+  image: registry.eqlan.ru/boutique-app/adservice
+  interval: 5m0s
+
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: cartservice
+  namespace: flux-system
+spec:
+  image: registry.eqlan.ru/boutique-app/cartservice
+  interval: 5m0s
