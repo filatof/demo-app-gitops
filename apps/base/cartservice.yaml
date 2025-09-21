@@ -43,10 +43,10 @@ spec:
           allowPrivilegeEscalation: false
           capabilities:
             drop:
-              - ALL
+            - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/boutique-app/cartservice:20250916-1812-ac6eee7a # {"$imagepolicy": "flux-system:cartservice"}
+        image: registry.eqlan.ru/boutique-app/cartservice:main-2ac4f55-1758477395 # {"$imagepolicy": "flux-system:cartservice"}
         ports:
         - containerPort: 7070
         env:
@@ -62,14 +62,14 @@ spec:
         readinessProbe:
           initialDelaySeconds: 15
           periodSeconds: 10
-          timeoutSeconds: 5       
+          timeoutSeconds: 5
           failureThreshold: 5
           grpc:
             port: 7070
         livenessProbe:
           initialDelaySeconds: 20
           periodSeconds: 10
-          timeoutSeconds: 5       
+          timeoutSeconds: 5
           failureThreshold: 5
           grpc:
             port: 7070

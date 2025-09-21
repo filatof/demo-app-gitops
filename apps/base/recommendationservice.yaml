@@ -43,10 +43,10 @@ spec:
           allowPrivilegeEscalation: false
           capabilities:
             drop:
-              - ALL
+            - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/boutique-app/recommendationservice:20250916-1842-d7ec0ee2 # {"$imagepolicy": "flux-system:recommendationservice"}
+        image: registry.eqlan.ru/boutique-app/recommendationservice:main-8833cc5-1758477786 # {"$imagepolicy": "flux-system:recommendationservice"}
         ports:
         - containerPort: 8080
         readinessProbe:

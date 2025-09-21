@@ -42,10 +42,10 @@ spec:
           allowPrivilegeEscalation: false
           capabilities:
             drop:
-              - ALL
+            - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/boutique-app/shippingservice:20250916-1843-1018c519 # {"$imagepolicy": "flux-system:shippingservice"}
+        image: registry.eqlan.ru/boutique-app/shippingservice:main-b7ef8b5-1758477791 # {"$imagepolicy": "flux-system:shippingservice"}
         ports:
         - containerPort: 50051
         env:

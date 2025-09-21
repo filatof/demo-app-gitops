@@ -43,10 +43,10 @@ spec:
           allowPrivilegeEscalation: false
           capabilities:
             drop:
-              - ALL
+            - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/boutique-app/paymentservice:20250916-1839-9a75b6ec # {"$imagepolicy": "flux-system:paymentservice"}
+        image: registry.eqlan.ru/boutique-app/paymentservice:main-3f1078a-1758477744 # {"$imagepolicy": "flux-system:paymentservice"}
         ports:
         - containerPort: 50051
         env:

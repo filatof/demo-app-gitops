@@ -43,10 +43,10 @@ spec:
           allowPrivilegeEscalation: false
           capabilities:
             drop:
-              - ALL
+            - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/boutique-app/emailservice:20250916-1834-efe2cf43 # {"$imagepolicy": "flux-system:emailservice"}
+        image: registry.eqlan.ru/boutique-app/emailservice:main-ced17a2-1758477706 # {"$imagepolicy": "flux-system:emailservice"}
         ports:
         - containerPort: 8080
         env:
