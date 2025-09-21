@@ -1,3 +1,4 @@
+---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
@@ -6,3 +7,21 @@ metadata:
 spec:
   url: oci://ghcr.io/nginx/charts
   type: oci
+
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: nginx
+  namespace: nginx
+spec:
+  chart:
+    spec:
+      chart: nginx-ingress
+      version: 2.3.x
+      sourceRef:
+        kind: HelmRepository
+        name: nginx
+      interval: 5h
+  interval: 5h
+  releaseName: nginx
