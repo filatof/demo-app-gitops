@@ -26,9 +26,9 @@ spec:
     metadata:
       labels:
         app: adservice
-      # annotations:
-      #   consul.hashicorp.com/connect-inject: "true"
-      #   consul.hashicorp.com/transparent-proxy-exclude-inbound-ports: "9555"
+        # annotations:
+        #   consul.hashicorp.com/connect-inject: "true"
+        #   consul.hashicorp.com/transparent-proxy-exclude-inbound-ports: "9555"
     spec:
       serviceAccountName: adservice
       terminationGracePeriodSeconds: 5
@@ -43,10 +43,10 @@ spec:
           allowPrivilegeEscalation: false
           capabilities:
             drop:
-              - ALL
+            - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/boutique-app/adservice:20250916-1749-614c5cf3 # {"$imagepolicy": "flux-system:adservice"}
+        image: registry.eqlan.ru/boutique-app/adservice:main-e6ae562-1758480543 # {"$imagepolicy": "flux-system:adservice"}
         ports:
         - containerPort: 9555
         env:
