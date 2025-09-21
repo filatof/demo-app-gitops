@@ -45,7 +45,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/boutique-app/shippingservice:20250916-1843-1018c519
+        image: registry.eqlan.ru/boutique-app/shippingservice:20250916-1843-1018c519 # {"$imagepolicy": "flux-system:shippingservice"}
         ports:
         - containerPort: 50051
         env:

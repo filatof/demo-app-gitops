@@ -46,7 +46,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/boutique-app/emailservice:20250916-1834-efe2cf43
+        image: registry.eqlan.ru/boutique-app/emailservice:20250916-1834-efe2cf43 # {"$imagepolicy": "flux-system:emailservice"}
         ports:
         - containerPort: 8080
         env:

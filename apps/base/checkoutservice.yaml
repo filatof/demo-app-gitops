@@ -45,7 +45,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: registry.eqlan.ru/boutique-app/checkoutservice:20250916-1828-371e10ca
+          image: registry.eqlan.ru/boutique-app/checkoutservice:20250916-1828-371e10ca # {"$imagepolicy": "flux-system:checkoutservice"}
           ports:
           - containerPort: 5050
           readinessProbe:

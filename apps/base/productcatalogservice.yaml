@@ -46,7 +46,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/boutique-app/productcatalogservice:20250916-1840-305d4265
+        image: registry.eqlan.ru/boutique-app/productcatalogservice:20250916-1840-305d4265 # {"$imagepolicy": "flux-system:productcatalogservice"}
         ports:
         - containerPort: 3550
         env:

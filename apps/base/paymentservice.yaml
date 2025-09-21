@@ -46,7 +46,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/boutique-app/paymentservice:20250916-1839-9a75b6ec
+        image: registry.eqlan.ru/boutique-app/paymentservice:20250916-1839-9a75b6ec # {"$imagepolicy": "flux-system:paymentservice"}
         ports:
         - containerPort: 50051
         env:

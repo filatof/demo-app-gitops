@@ -46,7 +46,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/boutique-app/adservice:20250916-1749-614c5cf3
+        image: registry.eqlan.ru/boutique-app/adservice:20250916-1749-614c5cf3 # {"$imagepolicy": "flux-system:adservece"}
         ports:
         - containerPort: 9555
         env:

@@ -46,7 +46,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/boutique-app/cartservice:20250916-1812-ac6eee7a
+        image: registry.eqlan.ru/boutique-app/cartservice:20250916-1812-ac6eee7a # {"$imagepolicy": "flux-system:cartservice"}
         ports:
         - containerPort: 7070
         env:
