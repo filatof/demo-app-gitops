@@ -19,7 +19,7 @@ spec:
   interval: 30m0s
   sourceRef:
     kind: GitRepository
-    name: demo-app-gitops
+    name: flux-system
   update:
     path: ./apps/base
     strategy: Setters
