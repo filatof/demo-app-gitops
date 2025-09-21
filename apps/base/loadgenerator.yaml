@@ -61,7 +61,7 @@ spec:
           allowPrivilegeEscalation: false
           capabilities:
             drop:
-              - ALL
+            - ALL
           privileged: false
           readOnlyRootFilesystem: true
         image: busybox:latest
@@ -74,10 +74,10 @@ spec:
           allowPrivilegeEscalation: false
           capabilities:
             drop:
-              - ALL
+            - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: registry.eqlan.ru/boutique-app/loadgenerator:main-a301f85-1758471921 # {"$imagepolicy": "flux-system:loadgenerator"}
+        image: registry.eqlan.ru/boutique-app/loadgenerator:main-f36f9f1-1758475673 # {"$imagepolicy": "flux-system:loadgenerator"}
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
