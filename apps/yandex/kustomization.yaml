@@ -2,3 +2,114 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../base
+
+patches:
+  - target:
+      kind: Deployment
+      name: emailservice
+      group: apps
+      version: v1
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: "us-central1-docker.pkg.dev/google-samples/microservices-demo/emailservice:v0.10.3"
+
+  - target:
+      kind: Deployment
+      name: checkoutservice
+      group: apps
+      version: v1
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: "us-central1-docker.pkg.dev/google-samples/microservices-demo/checkoutservice:v0.10.3"
+
+  - target:
+      kind: Deployment
+      name: recommendationservice
+      group: apps
+      version: v1
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: "us-central1-docker.pkg.dev/google-samples/microservices-demo/recommendationservice:v0.10.3"
+
+  - target:
+      kind: Deployment
+      name: frontend
+      group: apps
+      version: v1
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: "us-central1-docker.pkg.dev/google-samples/microservices-demo/frontend:v0.10.3"
+
+  - target:
+      kind: Deployment
+      name: paymentservice
+      group: apps
+      version: v1
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: "us-central1-docker.pkg.dev/google-samples/microservices-demo/paymentservice:v0.10.3"
+
+  - target:
+      kind: Deployment
+      name: productcatalogservice
+      group: apps
+      version: v1
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: "us-central1-docker.pkg.dev/google-samples/microservices-demo/productcatalogservice:v0.10.3"
+
+  - target:
+      kind: Deployment
+      name: cartservice
+      group: apps
+      version: v1
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: "us-central1-docker.pkg.dev/google-samples/microservices-demo/cartservice:v0.10.3"
+
+  - target:
+      kind: Deployment
+      name: loadgenerator
+      group: apps
+      version: v1
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: "us-central1-docker.pkg.dev/google-samples/microservices-demo/loadgenerator:v0.10.3"
+
+  - target:
+      kind: Deployment
+      name: currencyservice
+      group: apps
+      version: v1
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: "us-central1-docker.pkg.dev/google-samples/microservices-demo/currencyservice:v0.10.3"
+
+  - target:
+      kind: Deployment
+      name: shippingservice
+      group: apps
+      version: v1
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: "us-central1-docker.pkg.dev/google-samples/microservices-demo/shippingservice:v0.10.3"
+
+  - target:
+      kind: Deployment
+      name: adservice
+      group: apps
+      version: v1
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: "us-central1-docker.pkg.dev/google-samples/microservices-demo/adservice:v0.10.3"
