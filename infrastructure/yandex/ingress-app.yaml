@@ -4,18 +4,31 @@ metadata:
   name: ingress-app
   namespace: default
   annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    
+    kubernetes.io/ingress.class: "nginx"
+    # SSL редирект пока отключен
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    
+    # Настройки для корректной работы
+    nginx.ingress.kubernetes.io/proxy-body-size: "50m"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    
+    # Если нужно переписывание путей (уберите если не нужно)
+    # nginx.ingress.kubernetes.io/rewrite-target: /
+    
 spec:
-  ingressClassName: "nginx"
+  ingressClassName: nginx
+  
   rules:
-    - host: app.eqlan.online
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: frontend
-                port:
-                  number: 80
+  - host: app.eqlan.online
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend
+            port:
+              number: 80
