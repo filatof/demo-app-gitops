@@ -6,40 +6,39 @@ resources:
 
 # замена образов для amd64 архетекетуры
 images:
-  - name: emailservice
+  - name: registry.eqlan.ru/boutique-app/emailservice
     newName: us-central1-docker.pkg.dev/google-samples/microservices-demo/emailservice
     newTag: v0.10.3
-  - name: checkoutservice
+  - name: registry.eqlan.ru/boutique-app/checkoutservice
     newName: us-central1-docker.pkg.dev/google-samples/microservices-demo/checkoutservice
     newTag: v0.10.3
-  - name: recommendationservice
+  - name: registry.eqlan.ru/boutique-app/recommendationservice
     newName: us-central1-docker.pkg.dev/google-samples/microservices-demo/recommendationservice
     newTag: v0.10.3
-  - name: frontend
+  - name: registry.eqlan.ru/boutique-app/frontend
     newName: us-central1-docker.pkg.dev/google-samples/microservices-demo/frontend
     newTag: v0.10.3
-  - name: paymentservice
+  - name: registry.eqlan.ru/boutique-app/paymentservice
     newName: us-central1-docker.pkg.dev/google-samples/microservices-demo/paymentservice
     newTag: v0.10.3
-  - name: productcatalogservice
+  - name: registry.eqlan.ru/boutique-app/productcatalogservice
     newName: us-central1-docker.pkg.dev/google-samples/microservices-demo/productcatalogservice
     newTag: v0.10.3
-  - name: cartservice
+  - name: registry.eqlan.ru/boutique-app/cartservice
     newName: us-central1-docker.pkg.dev/google-samples/microservices-demo/cartservice
     newTag: v0.10.3
-  - name: loadgenerator
+  - name: registry.eqlan.ru/boutique-app/loadgenerator
     newName: us-central1-docker.pkg.dev/google-samples/microservices-demo/loadgenerator
     newTag: v0.10.3
-  - name: currencyservice
+  - name: registry.eqlan.ru/boutique-app/currencyservice
     newName: us-central1-docker.pkg.dev/google-samples/microservices-demo/currencyservice
     newTag: v0.10.3
-  - name: shippingservice
+  - name: registry.eqlan.ru/boutique-app/shippingservice
     newName: us-central1-docker.pkg.dev/google-samples/microservices-demo/shippingservice
     newTag: v0.10.3
-  - name: adservice
+  - name: registry.eqlan.ru/boutique-app/adservice
     newName: us-central1-docker.pkg.dev/google-samples/microservices-demo/adservice
     newTag: v0.10.3
-
 # Патч ресурсов loadgenerator
 patches:
   - target:
