@@ -8,7 +8,7 @@ patches:
 - target:
     kind: HelmRelease
     name: nginx
-    namespace: nginx
+    namespace: ingress-nginx
   patch: |-
     - op: add
       path: /spec/values
