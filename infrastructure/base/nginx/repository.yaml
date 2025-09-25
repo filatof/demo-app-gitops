@@ -2,26 +2,24 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: nginx
+  name: ingress-nginx
   namespace: ingress-nginx
 spec:
-  url: oci://ghcr.io/nginx/charts
-  type: oci
+  url: https://kubernetes.github.io/ingress-nginx
+  type: helm
+
 
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
-  name: nginx
+  name: ingress-nginx
   namespace: ingress-nginx
 spec:
   chart:
     spec:
-      chart: nginx-ingress
-      version: 2.3.x
+      chart: ingress-nginx
       sourceRef:
         kind: HelmRepository
-        name: nginx
-      interval: 5h
-  interval: 5h
-  releaseName: nginx
+        name: ingress-nginx
+  interval: 5m 
